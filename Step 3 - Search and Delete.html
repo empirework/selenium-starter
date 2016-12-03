@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://ec2-52-31-177-160.eu-west-1.compute.amazonaws.com/open-eshop-2.0.1/oc-panel" />
+<title>Step 3 - Searсh and Delete</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Step 3 - Searсh and Delete</td></tr>
+</thead><tbody>
+<tr>
+	<td>type</td>
+	<td>name=name</td>
+	<td>evpalov</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.btn</td>
+	<td>Search</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=i.glyphicon.glyphicon-trash</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=.sweet-alert.visible</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.confirm</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>//div[@id='content']/div[3]/div/div/table.1.0</td>
+	<td>Evpalov</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//div[@id='content']/div[3]/div/div/table.1.0</td>
+	<td>Evpalov</td>
+</tr>
+</tbody></table>
+</body>
+</html>
